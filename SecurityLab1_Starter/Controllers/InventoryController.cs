@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace SecurityLab1_Starter.Controllers
 {
+    [Authorize]
     public class InventoryController : Controller
     {
         // GET: Inventory

@@ -15,6 +15,13 @@ namespace SecurityLab1_Starter
 
 
             routes.MapRoute(
+             name: "New",
+             url: "{controller}/{action}/{id}",
+             defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional }
+             );
+
+
+            routes.MapRoute(
              name: "Original",
              url: "{controller}/{action}/{id}",
              defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
@@ -26,7 +33,8 @@ namespace SecurityLab1_Starter
                defaults: new { controller = "Home", action = "Index" },
                constraints: new { action = "Index|Contact|About|GenError" }
            );
-            /*
+
+                        /*
 
             routes.MapRoute(
                 name: "EmptyUrl",

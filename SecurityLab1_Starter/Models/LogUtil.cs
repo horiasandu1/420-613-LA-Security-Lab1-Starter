@@ -40,5 +40,17 @@ namespace SecurityLab1_Starter.Models
             w.WriteLine("-------------------------------");
         }
 
+        public void LogAccess(string logMessage, TextWriter w)
+        {
+
+
+
+            
+            w.Write($"{DateTime.Now.ToShortDateString()},{DateTime.Now.ToShortTimeString()},");
+            w.Write($"{logMessage}");
+            w.WriteLine("");
+           
+        }
+
     }
 }
